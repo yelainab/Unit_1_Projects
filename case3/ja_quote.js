@@ -32,12 +32,12 @@ function getQuote(n) {
    return quotes[n];
 }
 
-randomInt(0,10);
+var randomQ = randomInt(0,10);
 function randomInt(lowest, size){
-   var randomQ = Math.floor(Math.random() * size + lowest);
-   return randomQ;
+   var randy = Math.floor(Math.random() * size + lowest);
+   return randy;
 }
 
-var quoteElem = getQuote(randomQ);
+var quoteElem = document.getElementsByTagName("quote")[0];
 
-
+quoteElem.innerHTML = getQuote(randomQ);
