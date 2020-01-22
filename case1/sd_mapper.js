@@ -11,16 +11,13 @@
 */
 
 var thisTime = new Date(18, 1, 3, 3, 15, 28);
-var timeStr = date.toLocaleString(thisTime);
-var thisHour = date.getHours();
-var thisMonth = date.getMonth();
-/*var timeStr = thisTime.toLocaleString();*/
+var timeStr = thisTime.toLocaleString();
+var thisHour = thisTime.getHours();
+var thisMonth = thisTime.getMonth();
 
-document.getElementById("timestamp").innerHTML = timeStr
+var mapNum = (2 * thisMonth + thisHour) % 24;
+var imgStr = "<img src='sd_skyMap.png' />" + mapNum + ".png ' ";
 
-
-
-var imgStr = "<img src='sd_skyMap.png' />";
-
-
+//document.getElementById("timestamp").innerHTML = timeStr;
+document.getElementById("planisphere").insertAdjacentHTML("afterbegin", imgStr);
 

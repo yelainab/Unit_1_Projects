@@ -5,16 +5,22 @@
    Case Problem 2
 
    Today at the Union Script
-   Author:  yelaina
-   Date:   buford
+   Author:  yelaina buford
+   Date:   1/21/20
    
    This script uses the getEvent() function to return the
    HTML code containin the daily events at the Bridger College
    student union.
 
 */
+//event date
+var thisDate = new Date();
+var datestring = thisDate.toLocaleDateString();
+var dateHTML = "<h2>" + datestring + "</h2>";
+var thisDay = thisDate.getDay();
+var eventHTML = getEvent(thisDay);
 
-
+document.getElementById("unionToday").insertAdjacentHTML("beforeEnd", dateHTML + eventHTML);
 
 function getEvent(day) {
    var eventHTML;

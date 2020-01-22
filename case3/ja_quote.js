@@ -1,3 +1,4 @@
+"use strict";
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 9
@@ -30,3 +31,13 @@ function getQuote(n) {
    
    return quotes[n];
 }
+
+randomInt(0,10);
+function randomInt(lowest, size){
+   var randomQ = Math.floor(Math.random() * size + lowest);
+   return randomQ;
+}
+
+var quoteElem = getQuote(randomQ);
+
+
