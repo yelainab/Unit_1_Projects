@@ -17,7 +17,6 @@ var thisMonth = thisTime.getMonth();
 
 var mapNum = (2 * thisMonth + thisHour) % 24;
 var imgStr = "<img src='sd_skyMap.png' />" + mapNum + ".png ' ";
-
-//document.getElementById("timestamp").innerHTML = timeStr;
 document.getElementById("planisphere").insertAdjacentHTML("afterbegin", imgStr);
 
+document.getElementById("timestamp").innerHTML = timeStr;
